@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/new_file.css"/>
+		<link rel="stylesheet" type="text/css" href="js/swiper.css"/>
+	</head>
+	<body ng-controller="ctrl">
+		<!--头部样式-->
+		<header>
+			<div style="width: 10%;"><img src="img/icon1.png"/></div>
+			<div class="zhong">
+				<div class="placce">
+					
+					<span><img src="img/icon2.png" />北京站</span>
+				</div>
+				<hr style="height: 30px; width: 1px;border: 1px solid #333; margin-top: 5px;" />
+				<div class="sech">
+					<img src="img/icon3.png" width="5%" height="30px" style="margin-top: 5px;"/>
+					<input type="text" placeholder="国家/城市/关键词"/>
+				</div>
+			</div>
+			<div style="width: 10%;">
+				<img src="img/icon4.png" />
+			</div>
+		</header>
+		<!--轮播图样式-->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="img/02d62d95dc41402.jpg" width="100%"/></div>
+				<div class="swiper-slide"><img src="img/1b34e530c9ddf802.jpg" width="100%"/></div>
+				<div class="swiper-slide"><img src="img/66b555f9f1293a02.jpg" width="100%"/></div>
+				<div class="swiper-slide"><img src="img/6d7515da3e8e5d02.jpg" width="100%"/></div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<!--路由-->
+		<ng-view></ng-view>
+		
+		<!--页脚-->
+		<footer>
+			<div><div id="f1"></div><a style="color: deepskyblue;" href="#/dujia">度假</a></div>
+			<div><div id="f2"></div><a href="#/faxian">发现</a></div>
+			<div><div id="f3"></div><a href="#/temai">特卖</a></div>
+			<div><div id="f4"></div><a href="#/my">我的</a></div>
+		</footer>
+	</body>
+	<script src="js/angular.js"></script>
+	<script src="js/angular-route.js"></script>
+	<script src="js/swiper.js"></script>
+	<script>
+	//设置轮播图属性
+		var myswiper = new Swiper('.swiper-container',{
+			autoplay:2000,
+			loop:true,
+			paginationClickable:true,
+			pagination:'.swiper-pagination'
+		})
+	//创建angu app	
+		var app =angular.module('app',['ngRoute'])
+	//设置路由	
+		app.config(['$routeProvider',function($routeProvider){
+			$routeProvider
+			.when('/dujia',{templateUrl:'page/dujia.html'})
+			.when('/faxian',{templateUrl:'page/faxian.html'})
+			.when('/temai',{templateUrl:'page/temai.html'})
+			.when('/my',{templateUrl:'page/my.html'})
+			.otherwise('/dujia')
+		}])
+	//设置angu控制器	
+		app.controller('ctrl',function($scope,$http){
+			//获取服务器数据
+			$http.get('http://127.0.0.1:8080').success(function(data){
+				$scope.arr=data;
+				console.log($scope.arr)
+			})
+		})  
+	</script>
+</html>

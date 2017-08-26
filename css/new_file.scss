@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+header{
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    line-height: 50px;
+    background: red;
+    text-align: center;
+}
+.placce{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    margin-top: -5px;
+}
+.sech{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    input{
+        width: 70%;
+        margin-left: -10px;
+        height: 40px;
+       
+        outline: none;border: none;
+    }
+}
+.zhong{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    background: #fff;
+    height: 40px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+.mudi{
+    background: url(../img/title_summer.gtz.jpg)no-repeat;
+    height: 150px;
+    width: 100%;
+    background-size: 100%;
+    margin-top: -5px;
+    text-align: center;
+    p{
+        height: 30px;
+        line-height: 30px;
+        width: 80%;
+        background: orange;
+        font-size: 12px;
+        margin-left: 10%;
+        border-radius: 10px;
+        position: relative;
+        top: 10px;
+    }
+    h3{
+        color: #fff;
+        position: relative;
+        top: 50px;
+    }
+}
+.rout{
+    width: 100%;
+    
+    background: orangered;
+    margin-top: -17px;
+}
+
+.rout{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-flow: wrap;
+    div{
+        position: relative;
+        margin-top: 5px;
+        width: 30%;
+        background-size: 100%;
+        height: 150px;
+    }
+}
+#nr{
+    width: 100%;
+    background:rgba(0,0,0,0.5);
+    height: 100px;
+    z-index: 1111;
+    position: absolute;
+    bottom: 0px;
+    border-radius:50px 50px 0px 0px;
+    text-align: center;
+    
+   p{
+       position: relative;
+       top: 30px;
+        color: #fff;
+        text-align: center;
+   }
+    
+}
+.count{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-flow: wrap;
+    background: orangered;
+    div{
+        margin-top: 5px;
+        width: 20%;
+        height: 30px;
+        background: orange;
+        color: #333;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 5px;
+    }
+}
+footer{
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    color: #333;
+    div{
+        width: 50px;
+        height: 50px;
+    }
+    a{
+        color: #333;
+    }
+}
+#f1{
+    background: url(../img/footer_v2.png) no-repeat;
+    background-position: 5px -43px; 
+    color: deepskyblue;
+}
+#f2{
+    background: url(../img/footer_v2.png) no-repeat;
+    background-position: 5px -91px; 
+}
+#f3{
+    background: url(../img/footer_v2.png) no-repeat;
+    background-position: 5px -190px; 
+}
+#f4{
+    background: url(../img/footer_v2.png) no-repeat;
+    background-position: 5px -293px; 
+}

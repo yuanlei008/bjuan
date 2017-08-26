@@ -1,0 +1,22 @@
+<div class="mudi">
+			<p><img src="img/icon5.png"/>wchina刚刚购买了，昆明-迪拜6天4晚组团旅游</p>
+			<h3>当季热门目的地</h3>
+</div>
+<div class="rout">
+	<div ng-repeat="x in arr.tu" style="background: url(img/{{x.img}}) no-repeat;background-size: 100%;">
+		<div id="nr">
+			<p>
+				{{x.di}}
+			</p>
+			<p style="background: orangered; width: 80%;margin-left: 10%;border-radius: 10px;margin-top: 10px;">{{x.ren}}人</p>
+		</div>
+	</div>
+</div>
+<div class="count">
+	<div ng-repeat="f in arr.nr">{{f.name}}</div>
+	
+</div>
+<div class="count">
+	<div ng-repeat="e in arr.nrr">{{e.name}}</div>
+	
+</div>
